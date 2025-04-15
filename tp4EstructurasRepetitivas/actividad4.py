@@ -6,5 +6,5 @@ sumatoria = 0
 while corte:
     numero = int(input("Ingrese un número entero positivo: "))
     sumatoria += numero
-    corte = numero != 0
+    corte = numero != 0 # Se detiene el ciclo cuando el usuario ingresa 0
 print(f'La sumatoria de los números ingresados es: {sumatoria}')
