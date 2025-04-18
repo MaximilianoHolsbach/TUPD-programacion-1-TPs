@@ -46,3 +46,32 @@ def informarSiEsPrimo(num1):
         print(f'El número {num1} es primo')
     else:
         print(f'El número {num1} no es primo')
+
+def sumaDivisoresPropios(num1):
+    suma = 0
+    for i in range(1, (num1 // 2) + 1):
+        if esMultipo(num1, i):
+            suma = suma + i
+    return suma
+
+def esPerfecto(num1):
+    return sumaDivisoresPropios(num1) == num1
+
+def informarSiEsPerfecto(num1):
+    if esPerfecto(num1):
+        print(f'El número {num1} es perfecto')
+    else:
+        print(f'El número {num1} no es perfecto')
+
+def sucesionSimbolos(simbolo, cantidad):
+    sucecion = ''
+    for i in range(cantidad):
+        sucecion += simbolo
+    return sucecion
+
+def imprimirSimbolo(simbolo, cantidad):
+    print(sucesionSimbolos(simbolo, cantidad))
+
+def imprimirMatrizSimbolos(columnas, filas, simbolo = 'X'):
+    for i in range(filas):
+        imprimirSimbolo(simbolo, columnas)
