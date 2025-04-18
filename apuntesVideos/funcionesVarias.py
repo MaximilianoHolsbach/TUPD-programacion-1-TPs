@@ -29,13 +29,15 @@ def esMultipo(num1, num2): # En este caso utilizamos el uso de composición de f
    return obtenerResto(num1, num2) == 0
 
 def leerEnteroValido(mensaje, min = float('-inf'), max = float('inf')):
-    num = input(f'{mensaje}')
-    while not num.isdigit() or len(num) == 0:
-        num = input(f'Error, {mensaje}')
-    num = int(num) # Convertimos a entero el número
-    # Validamos que el número esté dentro del rango permitido
+    num = int(input(f'{mensaje}'))
     while num < min or num > max:
         num = int(input(f'Error, {mensaje}'))
+    return num
+
+def leerDecimalValido(mensaje, min = float('-inf'), max = float('inf')):
+    num = float(input(f'{mensaje}'))
+    while num < min or num > max:
+        num = float(input(f'Error, {mensaje}'))
     return num
 
 def validarCadena(mensaje, min = float('-inf'), max = float('inf')):
@@ -108,3 +110,62 @@ def calcularPerimetroCirculo(radio):
     :return: Perímetro del círculo.
     """
     return 2 * 3.14 * radio # Usamos 3.14 como aproximación de pi
+
+def segundosAhoras(segundos):
+    """
+    Función que convierte segundos a horas, minutos y segundos.
+    :param segundos: Segundos a convertir.
+    :return: Tupla con horas, minutos y segundos.
+    """
+    horas = segundos // 3600
+    minutos = (segundos % 3600) // 60
+    segundos = (segundos % 3600) % 60
+    return horas, minutos, segundos
+
+def tablaMultiplicar(numero):
+    """
+    Función que imprime la tabla de multiplicar de un número dado.
+    :param numero: Número del cual se quiere imprimir la tabla de multiplicar.
+    """
+    for i in range(1, 11):
+        print(f'{numero} x {i} = {numero * i}') # Imprimimos la tabla de multiplicar del número
+
+def operacionesBasicas(num1, num2):
+    """
+    Función que realiza las operaciones básicas (suma, resta, multiplicación y división) entre dos números.
+    :param num1: Primer número.
+    :param num2: Segundo número.
+    :return: Tupla con los resultados de las operaciones.
+    """
+    suma = num1 + num2
+    resta = num1 - num2
+    multiplicacion = num1 * num2
+    division = num1 / num2 if num2 != 0 else 'Error: División por cero'
+    return suma, resta, multiplicacion, division
+
+def calcularImc(peso, altura):
+    """
+    Función que calcula el índice de masa corporal (IMC) dado el peso y la altura.
+    :param peso: Peso en kilogramos.
+    :param altura: Altura en metros.
+    :return: IMC.
+    """
+    return peso / (altura ** 2) # Fórmula del IMC
+
+def celciusAFahrenheit(celsius):
+    """
+    Función que convierte grados Celsius a Fahrenheit.
+    :param celsius: Grados Celsius a convertir.
+    :return: Grados Fahrenheit.
+    """
+    return (celsius * 9/5) + 32 # Fórmula de conversión de Celsius a Fahrenheit
+
+def calcularPromedio(a, b, c):
+    """
+    Función que calcula el promedio de tres números.
+    :param a: Primer número.
+    :param b: Segundo número.
+    :param c: Tercer número.
+    :return: Promedio de los tres números.
+    """
+    return (a + b + c) / 3
