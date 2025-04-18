@@ -29,10 +29,27 @@ def esMultipo(num1, num2): # En este caso utilizamos el uso de composición de f
    return obtenerResto(num1, num2) == 0
 
 def leerEnteroValido(mensaje, min = float('-inf'), max = float('inf')):
-    num = int(input(f'{mensaje}'))
+    num = input(f'{mensaje}')
+    while not num.isdigit() or len(num) == 0:
+        num = input(f'Error, {mensaje}')
+    num = int(num) # Convertimos a entero el número
+    # Validamos que el número esté dentro del rango permitido
     while num < min or num > max:
         num = int(input(f'Error, {mensaje}'))
     return num
+
+def validarCadena(mensaje, min = float('-inf'), max = float('inf')):
+    """
+    Funcion que valida una cadena de texto.
+    :param mensaje: Mensaje a mostrar al usuario.
+    :param min: Longitud mínima de la cadena.
+    :param max: Longitud máxima de la cadena.
+    :return: Cadena de texto validada.
+    """
+    cadena = input(mensaje)
+    while len(cadena) < min or len(cadena) > max:
+        cadena = input(f'Error. {mensaje}')
+    return cadena
 
 def esPrimo(numero1):
     cont = 2
@@ -75,3 +92,19 @@ def imprimirSimbolo(simbolo, cantidad):
 def imprimirMatrizSimbolos(columnas, filas, simbolo = 'X'):
     for i in range(filas):
         imprimirSimbolo(simbolo, columnas)
+
+def calcularAreaCirculo(radio):
+    """
+    Función que calcula el área de un círculo dado su radio.
+    :param radio: Radio del círculo.
+    :return: Área del círculo.
+    """
+    return 3.14 * (radio ** 2) # Usamos 3.14 como aproximación de pi
+
+def calcularPerimetroCirculo(radio):
+    """
+    Función que calcula el perímetro de un círculo dado su radio.
+    :param radio: Radio del círculo.
+    :return: Perímetro del círculo.
+    """
+    return 2 * 3.14 * radio # Usamos 3.14 como aproximación de pi
