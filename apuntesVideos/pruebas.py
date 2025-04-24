@@ -1,19 +1,25 @@
-lista = []
+"""
+Ejercicio 1: Conversor de bases numéricas"""
+numero = input("Ingrese un número: ")   
+base_origen = int(input("Ingrese la base de origen (2, 8, 10, 16): "))
+base_destino = int(input("Ingrese la base de destino (2, 8, 10, 16): "))
+    # Paso 1: convertir a decimal
+decimal = int(numero, base_origen)
 
-def estaVacia(lista):
-    return len(lista) == 0
-
-def apilar(lista, elemento):
-    lista.append(elemento) # Agrega un elemento a la lista (pila)
-
-def desapilar(lista):
-    return lista.pop() if not estaVacia(lista) else "No hay elementos en la lista"
-
-apilar(lista, 1) # Agrega el elemento 1 a la lista (pila)
-apilar(lista, 2) # Agrega el elemento 2 a la lista (pila)
-print(lista) # Imprime la lista (pila) con los elementos 1 y 2
-desapilar(lista) # Elimina el último elemento agregado (2) de la lista (pila)
-print(lista) # Imprime la lista (pila) con el elemento 1 restante
-#terna = lista.pop(0) if not estaVacia(lista) else "No hay elementos en la lista"
-#print(terna) # Imprime el primer elemento de la lista o un mensaje si la lista está vacía
-
+    # Paso 2: convertir de decimal a la base destino
+if numero == "" or numero == "0":
+    decimal = 0
+if base_destino == 2:
+    binario =  bin(decimal)[2:]
+    print(f"El número {numero} en base {base_origen} es {binario} en base 2.")
+elif base_destino == 10:
+    decimal = decimal
+    print(f"El número {numero} en base {base_origen} es {decimal} en base 10.")
+elif base_destino == 8:
+    octal =  oct(decimal)[2:]
+    print(f"El número {numero} en base {base_origen} es {octal} en base 8.")
+elif base_destino == 16:
+    hexadecimal = hex(decimal)[2:].upper()
+    print(f"El número {numero} en base {base_origen} es {hexadecimal} en base 16.")
+else:
+    print("Base de destino no válida. Debe ser 2, 8, 10 o 16.")
