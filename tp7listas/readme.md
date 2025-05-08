@@ -42,10 +42,10 @@ diferentes clientes:
     ```python
     compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],["agua"]]
     ```
-    - a. Agregar "jugo" a la lista del tercer cliente usando append.
-    - b. Reemplazar "fideos" por "tallarines" en la lista del segundo cliente.
-    - c. Eliminar "pan" de la lista del primer cliente.
-    - d. Imprimir la lista resultante por pantalla
+    - Agregar "jugo" a la lista del tercer cliente usando append.
+    - Reemplazar "fideos" por "tallarines" en la lista del segundo cliente.
+    - Eliminar "pan" de la lista del primer cliente.
+    - Imprimir la lista resultante por pantalla
 10) Elaborar una lista anidada llamada “lista_anidada” que contenga los siguientes elementos:
     - Posición lista_anidada[0]: 15
     - Posición lista_anidada[1]: True
@@ -53,4 +53,4 @@ diferentes clientes:
     - Posición lista_anidada[2][1]: 57.9
     - Posición lista_anidada[2][2]: 30.6
     - Posición lista_anidada[3]: False
-Imprimir la lista resultante por pantalla.
+    - Imprimir la lista resultante por pantalla.
