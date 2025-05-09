@@ -16,6 +16,7 @@ print("**********************")
 print("* Métodos con listas *")
 print("**********************")
 
+
 # Se puede crear una lista de números automáticamente utilizando range(inicio, fin).
 
 print("Creando una lista de números automáticamente utilizando range(inicio, fin)")
