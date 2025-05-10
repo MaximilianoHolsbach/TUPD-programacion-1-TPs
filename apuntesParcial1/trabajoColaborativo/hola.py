@@ -25,5 +25,5 @@ ____________________________________
 - El índice (staging area) también se actualiza para reflejar el estado de los archivos en ese commit
 - El HEAD se mueve a apuntar a ese commit antiguo
 """
-print("Hola, mundo")
+print("hello world")
 
