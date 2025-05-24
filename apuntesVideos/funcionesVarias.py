@@ -169,3 +169,13 @@ def calcularPromedio(a, b, c):
     :return: Promedio de los tres números.
     """
     return (a + b + c) / 3
+
+def fibonacciRecursiva(posicion):
+    # Caso base: si la posición es 0, retornamos 0.
+    if posicion == 0:
+        return 0
+    # Caso base: si la posición es 1, retornamos 1.
+    elif posicion == 1:
+        return 1
+    else:
+        return fibonacciRecursiva(posicion - 1) + fibonacciRecursiva(posicion - 2)
